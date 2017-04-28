@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>CSPBenchmark</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>CSPBenchmark</name>
+			<type>2</type>
+			<location>/Users/jcarroll/CSPBenchmark</location>
+		</link>
+	</linkedResources>
+</projectDescription>
