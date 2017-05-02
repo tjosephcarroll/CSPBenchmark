@@ -16,7 +16,7 @@ echo "installing ruby"
 sudo yum -y -q install ruby
 
 #get benchmark from git
-echo "pulling ruby code from git repository"
+echo "Pulling ruby code from git repository"
 git clone https://github.com/tjosephcarroll/CSPBenchmark
 
 
