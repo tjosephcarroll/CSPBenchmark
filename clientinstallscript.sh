@@ -1,6 +1,7 @@
 #!/bin/bash
 #only for use on RHEL
 #
+#
 echo "Client Installation Script - RHEL"
 
 #wrk installation
