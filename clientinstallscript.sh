@@ -12,7 +12,7 @@ make
 cd ..
 
 #ruby installation
-echo "installing ruby"
+echo "Installing ruby"
 sudo yum -y -q install ruby
 
 #get benchmark from git
