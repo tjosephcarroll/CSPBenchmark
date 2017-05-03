@@ -12,5 +12,4 @@ sudo service httpd stop
 sudo ./cinstall
 
 #start apache
-#
 sudo service httpd start
