@@ -3,18 +3,12 @@
 
 echo "Client Installation Script - RHEL"
 
-#wrk installation
-echo "Installing wrk http benchmark tool"
-sudo yum -y -q groupinstall 'Development Tools'
-sudo yum -y -q install  openssl-devel
-sudo yum -y -q install  git
-git clone https://github.com/wg/wrk.git
-cd wrk
-make
-cd ..
+#get ab. I'm sure there's a cleaner way, but my driver vm can have apache.
+echo "Installing Apache and ab"
+sudo yum -y -q install httpd
 
 #ruby installation
-echo "Installing ruby"
+echo "Installing Ruby"
 sudo yum -y -q install ruby
 
 #get benchmark from git
