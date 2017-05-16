@@ -10,14 +10,14 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>CSP0.ini</name>
-			<type>1</type>
-			<location>/Users/jcarroll/Documents/workspace/CSPBenchmark/CSP0.ini</location>
-		</link>
-		<link>
 			<name>CSPBenchmark</name>
 			<type>2</type>
 			<location>/Users/jcarroll/CSPBenchmark</location>
+		</link>
+		<link>
+			<name>CSPConfig/Test1Baseline/CSP0.ini</name>
+			<type>1</type>
+			<location>/Users/jcarroll/Documents/workspace/CSPBenchmark/CSP0.ini</location>
 		</link>
 	</linkedResources>
 </projectDescription>
