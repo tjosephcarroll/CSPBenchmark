@@ -8,6 +8,8 @@
   # 2 -g filename
   # 3 full url
 # #
+# Output file https://blog.tom-fitzhenry.me.uk/2014/08/apache-bench-timings-visualised.html
+
 
 n   = ARGV[0]
 c   = ARGV[1]
