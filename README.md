@@ -9,7 +9,6 @@ Overall Goals:
     * IRIS Application Image
   * All modular pieces can be extended or replaced for your specific application or test
 
-Currently under development and subject to change. Current work is being done to write examples using docker-compose, Docker Swarm, and Kubernetes.
 
 TODO:
 * Write directions
