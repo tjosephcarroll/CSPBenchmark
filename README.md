@@ -13,6 +13,7 @@ Currently under development and subject to change. Current work is being done to
 
 TODO:
 * Write directions
+* Write configuration scripts?
 * docker-compose example
 * docker swarm example
 * kubernetes example
