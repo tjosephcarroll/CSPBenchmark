@@ -1,1 +1,6 @@
 FROM httpd
+#Here is where you'd copy your application files in
+COPY ./html/ /usr/local/apache2/htdocs/
+#
+COPY ./conf/httpd.conf /usr/local/apache2/conf/httpd.conf
+ADD ./csp/ /opt/cspgateway/bin/

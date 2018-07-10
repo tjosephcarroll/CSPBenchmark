@@ -1,5 +1,4 @@
 package main
-//https://github.com/devth/alpine-bench/blob/master/main.go
 import (
 	"encoding/json"
 	"fmt"

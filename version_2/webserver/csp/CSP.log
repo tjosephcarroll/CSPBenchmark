@@ -1,0 +1,15 @@
+>>> Time: Thu Jul 13 19:12:33 2017; RT Build: 1701.1606c (win32/apapi); Log-Level: 0; Gateway-PID: 10640; Gateway-TID: 6052
+    Initialization
+    The CSP Gateway module 'C:\InterSystems\201711\CSP\bin\CSPa24.dll' is loaded (IPv6 Enabled; MAX_CONNECTIONS=1024; MAX_SERVERS=9; MAX_APPLICATIONS=8; MAX_RESPONSE_BUFFER_SIZE=128000; Connection_Allocation=First Free; Nagle_Algorithm=Disabled; SHM=OS; IPC=WNP)
+>>> Time: Thu Jul 13 19:12:33 2017; RT Build: 1701.1606c (win32/apapi); Log-Level: 0; Gateway-PID: 5408; Gateway-TID: 16176
+    Initialization
+    The CSP Gateway module 'C:\InterSystems\201711\CSP\bin\CSPa24.dll' is loaded (IPv6 Enabled; MAX_CONNECTIONS=1024; MAX_SERVERS=9; MAX_APPLICATIONS=8; MAX_RESPONSE_BUFFER_SIZE=128000; Connection_Allocation=First Free; Nagle_Algorithm=Disabled; SHM=OS; IPC=WNP)
+>>> Time: Thu Jul 13 19:12:33 2017; RT Build: 1701.1606c (win32/apapi:srv=2.4.20/apr=1.5.2/apu=1.5.4/mpm=WinNT); Log-Level: 0; Gateway-PID: 5408; Gateway-TID: 16176
+    Initialization: Apache Worker Process
+    Global Configuration Block Initialized: PID=5408; SHMType=0;
+>>> Time: Thu Jul 13 19:12:52 2017; RT Build: 1701.1606c (win32/apapi:srv=2.4.20/apr=1.5.2/apu=1.5.4/mpm=WinNT); Log-Level: 0; Gateway-PID: 5408; Gateway-TID: 8912
+    Initialization
+    Windows Sockets library loaded (WS2_32.DLL) Version: 2.2
+>>> Time: Thu Jul 13 19:13:28 2017; RT Build: 1701.1606c (win32/apapi:srv=2.4.20/apr=1.5.2/apu=1.5.4/mpm=WinNT); Log-Level: 0; Gateway-PID: 5408; Gateway-TID: 8912
+    Initialization
+    The GZIP library (C:/InterSystems/201711/CSP/bin/zlib1.dll) is loaded - Version: 1.2.3 (Gateway built with version 1.2.3).  This library is used for the optional GZIP compression facility.
