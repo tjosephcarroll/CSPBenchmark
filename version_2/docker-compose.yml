@@ -14,31 +14,41 @@ services:
       - -k
       - /external/iris.key
     volumes:
-    - ./iris:/external
+      - ./iris:/external
+    networks: 
+      - backend
 
   webserver:
     build:
       context: ./webserver
       dockerfile: dockerfile
     depends_on:
-    - "iris"
+      - "iris"
     container_name: web_server
     ports:
-     - "80:80"
+      - "80:80"
+    networks: 
+      - default
+      - backend
 
   driver:
     build:
       context: ./driver
       dockerfile: dockerfile
     depends_on:
-    - "webserver"
+      - "webserver"
     container_name: ab_driver
     entrypoint:
       - main
       - -n3 
       - http://localhost
+    networks: 
+      - default
 networks:
   default:
     ipam:
       config:
         - subnet: 172.177.0.0/16
+  backend:
+    internal: true
+
