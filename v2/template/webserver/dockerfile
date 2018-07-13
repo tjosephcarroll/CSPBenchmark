@@ -1,0 +1,10 @@
+FROM docker.iscinternal.com/intersystems/iris:2018.1.1-stable
+
+FROM httpd
+COPY ./conf/httpd.conf /usr/local/apache2/conf/httpd.conf
+COPY --from=0 ./usr/irissys/csp/bin /opt/cspgateway/bin/
+COPY ./csp/CSP.ini /opt/cspgateway/bin/CSP.ini
+COPY ./csp/CSP.log /opt/cspgateway/bin/CSP.log
+
+#Here is where you'd copy your application files in
+COPY ./html/ /usr/local/apache2/htdocs/

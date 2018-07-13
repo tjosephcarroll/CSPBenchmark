@@ -1,0 +1,4 @@
+FROM docker.iscinternal.com/intersystems/iris:2018.1.1-stable
+RUN echo SYS > pass \
+&& /usr/irissys/dev/Cloud/ICM/changePassword.sh /pass 
+ENTRYPOINT ["/iris-main"]
