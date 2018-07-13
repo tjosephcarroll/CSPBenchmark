@@ -40,10 +40,11 @@ services:
     container_name: ab_driver
     entrypoint:
       - main
-      - -n3 
-      - http://localhost
+      - -n 10
+      - -c 10 
+      - http://web_server/
     networks: 
-      - default
+      - backend
 networks:
   default:
     ipam:

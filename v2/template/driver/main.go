@@ -1,4 +1,5 @@
 package main
+
 import (
 	"encoding/json"
 	"fmt"
@@ -19,7 +20,6 @@ const (
 
 func check(e error) {
 	if e != nil {
-		// log.Fatal(e)
 		panic(e)
 	}
 }
@@ -32,7 +32,6 @@ func toFloat(s string) float64 {
 
 func extractLatency(lines []string) map[string]map[string]float64 {
 
-	// Matches lines like: Connect:        0    1   0.1      1       1
 	statPattern, _ := regexp.Compile(`(\w+)\:\s+(\d+\.?\d*)\s+(\d+\.?\d*)\s+(\d+\.?\d*)\s+(\d+\.?\d*)\s+(\d+\.?\d*)`)
 	percPattern, _ := regexp.Compile(`\s+(\d+)\%\s+(\d+)`)
 
@@ -41,7 +40,6 @@ func extractLatency(lines []string) map[string]map[string]float64 {
 	}
 
 	for _, v := range lines {
-		// stat
 		stat := statPattern.FindStringSubmatch(v)
 		if stat != nil {
 			log.Println("Matched stat line", stat)
@@ -53,26 +51,22 @@ func extractLatency(lines []string) map[string]map[string]float64 {
 				"max":    toFloat(stat[6]),
 			}
 		}
-		// percentile
 		perc := percPattern.FindStringSubmatch(v)
 		if perc != nil {
 			log.Println("Matched percentline", perc)
 			latency["percentiles"][perc[1]] = toFloat(perc[2])
 		}
 	}
-	// log.Println(latency)
 	return latency
 }
 
 func runAb(cmd string, args []string) map[string]map[string]float64 {
 	log.Println("Running:", cmd, strings.Join(args, " "))
-	// out, err := exec.Command(cmd, args...).Output()
 	out, err := exec.Command(cmd, args...).CombinedOutput()
 	results := fmt.Sprintf("%s", out)
-	log.Println(results)
 	check(err)
+	log.Println(results)
 	lines := strings.Split(results, "\n")
-	// fmt.Printf("%d lines\n", len(lines))
 	latency := extractLatency(lines)
 	return latency
 }
@@ -109,6 +103,5 @@ func main() {
 
 	latency := runAb(cmd, args)
 
-	// This is the only line that prints to stdout, containing latency JSON
 	fmt.Println(toJson(latency))
 }
